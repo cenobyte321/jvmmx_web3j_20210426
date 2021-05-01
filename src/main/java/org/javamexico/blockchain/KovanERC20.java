@@ -34,7 +34,7 @@ public class KovanERC20 {
 
 
     private Credentials account() {
-        return Credentials.create(System.getenv("PRIVATE_KEY"));
+        return Credentials.create(System.getenv("JVMMX_PRIVATE_KEY"));
     }
 
 
