@@ -76,7 +76,7 @@ public class AaveLending {
 
 
     private Credentials account() {
-        return Credentials.create(System.getenv("JVMMX_KEY"));
+        return Credentials.create(System.getenv("JVMMX_PRIVATE_KEY"));
     }
 
 
