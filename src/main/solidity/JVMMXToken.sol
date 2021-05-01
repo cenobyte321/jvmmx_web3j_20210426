@@ -13,7 +13,7 @@ contract JVMMXToken is ERC20, Ownable {
         _mint(to, amount);
     }
 
-    function burn(address account, uint256 amount) external {
+    function burn(address account, uint256 amount) external onlyOwner {
         _burn(account, amount);
     }
 

@@ -24,9 +24,9 @@ public class KovanERC20 {
 
     public void run(){
         try {
-            IERC20 tusd = IERC20.load(TUSD_ADDRESS, web3j, account(), getGasProvider());
-            BigInteger balance = tusd.balanceOf(account().getAddress()).send();
-            logger.info("TUSD Balance: {}", tusd.balanceOf(account().getAddress()).send());
+            logger.info("Deploying ERC20 contract");
+            JVMMXToken jvmmxToken = JVMMXToken.deploy(web3j, account(), getGasProvider()).send();
+            logger.info(jvmmxToken.getContractAddress());
         } catch (Exception e){
             logger.error(e.getMessage());
         }
